@@ -13,9 +13,11 @@ class CustomerController extends Controller
         return view('customer.index',['customers'=>$data]);
     } 
 
-    public function destroy($id)
-    {
-       Customer::destroy($id);
-        return redirect('customer')->with('flash_message', 'Customer deleted!');  
+
+    public function delete($id){
+        $delete=DB::table("customers")
+        ->where("id",$id)
+        ->delete();
+        return redirect('/')->with("success,customer deleted!");
     }
 }

@@ -15,6 +15,10 @@
       </th>
     </tr>
   </thead>
+    @if (Session::has('success'))
+          {{session::get('success')}}
+    @endif
+
   @foreach ($customers as $customer)
   <tbody>
     <tr>
@@ -24,7 +28,7 @@
       <td>{{$customer->email}}</td>
       <td>{{$customer->address}}</td>
       <td><a href="#">Edit</a></td>
-      <td><a href="#">Delete</a></td>
+      <td><a href="/delete/{{$customer->id}}">Delete</a></td>
     </tr>
   </tbody>
   @endforeach
