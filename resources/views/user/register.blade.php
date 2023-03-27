@@ -55,4 +55,5 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <h6><a href={{"/login"}}>Already have an account? Sign in here.</a></h6>
+
   @include('partials.footer')

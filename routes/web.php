@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
+use App\Models\Customer;
+use App\Models\User;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +32,8 @@ Route::get('/customer', [CustomerController::class, 'index']);
 
 Route::get('/logout', [UserController::class, 'logout']);
 
-Route::get('/delete/{id}',  [CustomerController::class, 'delete']);
+Route::get('/delete/{id}',  [CustomerController::class, 'delete'])->middleware('auth');
+
+Route::get('/addUser', [CustomerController::class, 'addUser'])->middleware('auth');
+
+Route::post('/save', [CustomerController::class, 'saveUser'])->middleware('auth');

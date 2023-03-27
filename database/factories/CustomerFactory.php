@@ -19,7 +19,6 @@ class CustomerFactory extends Factory
         return [
             'lastName'=>fake()->lastname(),
             'firstName'=>fake()->firstname(),
-            'contactNumber'=>fake()->phoneNumber(),
             'address'=>fake()->address(),
             'email'=>fake()->SafeEmail(),
         ];

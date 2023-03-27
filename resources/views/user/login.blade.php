@@ -1,6 +1,5 @@
 @include('partials.header')
 
-<h3>Login Page</h3>
 <form action="/login/process" method="POST">
     @csrf
     
