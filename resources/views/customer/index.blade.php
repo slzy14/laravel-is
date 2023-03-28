@@ -1,7 +1,7 @@
 
 @include('partials.header')
 <x-nav/>
-
+<div class="container">
 <table class="table table-hover table-dark">
   <thead>
   
@@ -9,7 +9,7 @@
       <th scope="col">ID</th>
       <th scope="col">Last Name</th>
       <th scope="col">First Name</th>
-      <th scope="col">EMail</th>
+      <th scope="col">E-Mail</th>
       <th scope="col">Address</th>
       <th></th>
       <th>
@@ -35,4 +35,5 @@
   </tbody>
   @endforeach
 </table>
+</div>
 @include('partials.footer')
