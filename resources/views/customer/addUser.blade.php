@@ -1,5 +1,11 @@
 @include('partials.header')
 <x-nav/>
+  <style>
+  .container {
+    padding: 75px;
+    
+  }
+  </style>
 <div class="container">
 <form action="/save" method="POST">
 {{ csrf_field() }}

@@ -29,8 +29,8 @@
       <td>{{$customer->firstName}}</td>
       <td>{{$customer->email}}</td>
       <td>{{$customer->address}}</td>
-      <td><a href="#">Edit</a></td>
-      <td><a href="/delete/{{$customer->id}}">Delete</a></td>
+      <td><button class="btn btn-primary" type="submit" href="#" role="button">Edit</button></td>
+      <td><a class="btn btn-danger" href="/delete/{{$customer->id}}" role="button">Delete</a></td>
     </tr>
   </tbody>
   @endforeach

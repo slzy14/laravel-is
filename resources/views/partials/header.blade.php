@@ -12,7 +12,7 @@
   <title>Document</title>
   <style>
       body {
-        background-color: rgb(48, 48, 48);
+        background-color: rgba(26,30,33,255);
         color: white;
       }
     </style>

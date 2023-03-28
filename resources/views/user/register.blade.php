@@ -1,6 +1,6 @@
 @include('partials.header')
 
-<h3>Create an Account</h3>
+
 <form action="/store" method="POST">
     @csrf
     
