@@ -37,3 +37,7 @@ Route::get('/delete/{id}',  [CustomerController::class, 'delete'])->middleware('
 Route::get('/addUser', [CustomerController::class, 'addUser'])->middleware('auth');
 
 Route::post('/save', [CustomerController::class, 'saveUser'])->middleware('auth');
+
+Route::get('/edit/{id}',  [CustomerController::class, 'edit']);
+
+Route::post('/updateCustomer', [CustomerController::class, 'updateCustomer']);

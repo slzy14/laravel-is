@@ -37,4 +37,32 @@ class CustomerController extends Controller
         $customer=Customer::create($validated);
         return redirect('/');
     }
+
+
+    public function edit($id){
+        $data=Customer::findorFail($id);
+        return view('customer.edit',['customer'=>$data]);
+    }
+
+    public function updateCustomer(Request $req){
+        $req->validate([
+            "lastName" => ['required','min:4'],
+            "firstName" => ['required','min:4'],
+            "email" => ['required','min:4'],
+            "address" => ['required','min:4'],
+        ]);
+
+        $data=Customer::find($req->id);
+        $data->lastName=$req->lastName;
+        $data->firstName=$req->firstName;
+        $data->email=$req->email;
+        $data->address=$req->address;
+
+        $data->save();
+        return redirect ("/");
+    }
 }
+
+
+
+
