@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
+use App\Models\Product;
 use App\Models\Customer;
 use App\Models\User;
 
@@ -41,3 +43,17 @@ Route::post('/save', [CustomerController::class, 'saveUser'])->middleware('auth'
 Route::get('/edit/{id}',  [CustomerController::class, 'edit']);
 
 Route::post('/updateCustomer', [CustomerController::class, 'updateCustomer']);
+
+//products
+
+Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/deleteProduct/{id}', [ProductController::class, 'deleteProduct']);
+
+Route::get('/addProduct', [ProductController::class, 'addProduct']);
+
+Route::post('/saveProduct', [ProductController::class, 'saveProduct']);
+
+Route::get('/editProduct/{id}', [ProductController::class, 'editProduct']);
+
+Route::post('/updateProduct', [ProductController::class, 'updateProduct']);
